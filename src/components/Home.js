@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FaSearch } from 'react-icons/fa';
 import { getCars } from '../redux/cars/carsSlice';
 import Cars from './Cars';
-import { NavBar } from './Navigation';
 
 
 export const Home = () => {
@@ -20,9 +19,7 @@ export const Home = () => {
         <div>
   
           <div className="container">
-            <div>
-              <NavBar />
-            </div>
+           
             <div className="searchBox">
               <input
                 type="text"
