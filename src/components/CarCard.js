@@ -17,7 +17,7 @@ const Car = ({
 Car.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Car;
