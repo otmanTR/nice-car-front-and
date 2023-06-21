@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './index.css';
@@ -7,8 +7,7 @@ import myIcon from '../../images/icon.jpg';
 
 const Navbar = () => {
   const navRef = useRef();
-  const { token, isLoading } = useSelector((state) => state.authentication);
-  const dispatch = useDispatch();
+  useSelector((state) => state.authentication);
 
   const showNavBar = () => {
     if (window.innerWidth < 680) {
@@ -53,13 +52,6 @@ const Navbar = () => {
               Delete A Car
             </NavLink>
           </li>
-          {(!token || token.length <= 0 || isLoading) || (
-            <li>
-              <button className="nav__logout" type="button" onClick={handleClick}>
-                Logout
-              </button>
-            </li>
-          )}
         </ul>
         <h3 className="navbar__footer">
           &copy;
