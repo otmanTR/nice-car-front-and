@@ -9,6 +9,7 @@
   background-color: white;
   z-index: 99;
 }
+
 .title {
   flex: 1;
   max-height: 200px;
