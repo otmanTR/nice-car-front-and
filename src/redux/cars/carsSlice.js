@@ -5,8 +5,10 @@ const initialState = {
 
 };
 
+const url = 'http://127.0.0.1:3000/api/v1/cars';
+
 export const getCars = createAsyncThunk('getCars', async () => {
-  const response = await axios.get('http://127.0.0.1:3000/api/v1/cars');
+  const response = await axios.get(url);
   const carData = response.data;
   const cars = [];
   Object.keys(carData).forEach((key) => {
@@ -21,6 +23,16 @@ export const getCars = createAsyncThunk('getCars', async () => {
   });
   return cars;
 });
+
+export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
+  try {
+    const response = await axios.delete(url + id);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
+
 export const carsSlice = createSlice({
   name: 'cars',
   initialState,
@@ -30,7 +42,12 @@ export const carsSlice = createSlice({
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;
-      });
+      })
+      .addCase(deleteCar.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'succeded',
+        newStatus: payload,
+      }));
   },
 
 });
