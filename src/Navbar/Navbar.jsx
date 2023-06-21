@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './index.css';
 import { NavLink } from 'react-router-dom';
-import myIcon from '../../images/icon.png';
+import myIcon from '../../images/icon.jpg';
 
 const Navbar = () => {
   const navRef = useRef();
@@ -24,11 +24,11 @@ const Navbar = () => {
 
   return (
     <div className="headnavbar" ref={navRef}>
-      <button type="button" className="openbtn" onClick={showNavBar}>
+      <button type="button" className="nav-btn nav-open-btn" onClick={showNavBar}>
         <FaBars />
       </button>
       <nav className="navbar">
-        <button type="button" className="closebtn" onClick={hideNavBar}>
+        <button type="button" className="nav-btn nav-close-btn" onClick={hideNavBar}>
           <FaTimes />
         </button>
         <img className="title" src={myIcon} alt="Rent It icon" />
