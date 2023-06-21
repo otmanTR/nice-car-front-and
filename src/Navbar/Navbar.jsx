@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './index.css';
 import { NavLink } from 'react-router-dom';
-import { logout } from '../../redux/authentication/authenticationSlice';
 import myIcon from '../../images/icon.png';
 
 const Navbar = () => {
@@ -20,13 +19,6 @@ const Navbar = () => {
   const hideNavBar = () => {
     if (window.innerWidth < 680) {
       navRef.current.classList.toggle('responsive_nav');
-    }
-  };
-
-  const handleClick = () => {
-    dispatch(logout());
-    if (navRef.current.classList.contains('responsive_nav')) {
-      hideNavBar();
     }
   };
 
