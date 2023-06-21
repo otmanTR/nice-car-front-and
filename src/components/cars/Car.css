@@ -1,0 +1,8 @@
+.homeCarsList {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .car {
+    margin: 5px 5px 5px 5px;
+  }

@@ -8,7 +8,7 @@ const initialState = {
 export const getCars = createAsyncThunk('getCars', async () => {
   const response = await axios.get('http://127.0.0.1:3000/api/v1/cars');
   const carData = response.data;
-  const cars = {};
+  const cars = [];
   Object.keys(carData).forEach((key) => {
     const car = carData[key];
     cars[car.id] = {
