@@ -50,14 +50,14 @@ export const Home = () => {
           onClick={scrollLeft}
           type="button"
         >
-          Scroll Left
+          Previous
         </button>
         <button
           className="arrow-button arrow-right"
           onClick={scrollRight}
           type="button"
         >
-          Scroll Right
+          Next
         </button>
       </div>
     </div>
