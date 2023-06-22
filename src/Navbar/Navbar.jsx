@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './nav.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import myIcon from '../images/icon.jpg';
 
 const Navbar = () => {
@@ -32,26 +32,26 @@ const Navbar = () => {
         </button>
         <img className="title" src={myIcon} alt="Rent It icon" />
         <ul className="navbarlinks">
-          <li>
-            <NavLink onClick={hideNavBar} to="cars" activeClassName="active">
+          <Link to="/" className="link">
+            <li>
               Cars
-            </NavLink>
-          </li>
-          <li>
-            <NavLink onClick={hideNavBar} to="my-reservations" activeClassName="active">
+            </li>
+          </Link>
+          <Link to="/" className="link">
+            <li>
               Reservations
-            </NavLink>
-          </li>
-          <li>
-            <NavLink onClick={hideNavBar} to="add" activeClassName="active">
-              Add A Car
-            </NavLink>
-          </li>
-          <li>
-            <NavLink onClick={hideNavBar} to="delete" activeClassName="active">
-              Delete A Car
-            </NavLink>
-          </li>
+            </li>
+          </Link>
+          <Link to="/" className="link">
+            <li>
+              ADD A CAR
+            </li>
+          </Link>
+          <Link to="/" className="link">
+            <li>
+              DELETE A CAR
+            </li>
+          </Link>
           <NavLink onClick={hideNavBar} to="/signin" activeClassName="active">
             <button
               type="button"

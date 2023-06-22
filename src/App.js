@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home } from './components/Home';
 import { DeleteCar } from './components/DeleteCar';
-import Navbar from './Navbar/Navbar';
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Provider store={store}>
           <BrowserRouter>
             <Routes>
-              <Route exact path="/" element={<Navbar to="/cars" />} />
               <Route path="/" element={<Home />} />
               <Route path="/car-delete" element={<DeleteCar />} />
             </Routes>
