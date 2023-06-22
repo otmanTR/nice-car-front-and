@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'; //
-import { createDoctor } from '../redux/cars';
+import { createCar } from '../redux/cars';
 import '../styles/add-car.css';
 
 const AddCar = () => {
