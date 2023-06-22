@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux'; //
-import { createCar } from '../redux/cars';
-import '../styles/add-car.css';
+import { useDispatch } from 'react-redux';
+import { addCar } from '../redux/cars/carsSlice';
 
 const AddCar = () => {
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [model, setModel] = useState('');
   const [price, setPrice] = useState('');
+  const [message, setMessage] = useState('');
 
   const dispatch = useDispatch();
 
   const handleSubmit = async () => {
     try {
-      const response = await dispatch(createCar({
+      const response = await dispatch(addCar({
         name,
         image,
         model,
         price,
       }));
-      console.log('Added car successfully:', response);
-      console.log(response);
-      // Update message state with the success message from response
       setMessage('Added car successfully' || '');
     } catch (error) {
       console.error('Add car failed:', error);
