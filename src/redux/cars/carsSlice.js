@@ -48,6 +48,26 @@ export const carsSlice = createSlice({
   reducers: {
   },
   extraReducers: (builder) => {
+    
+ builder.addCase(addCar.pending, (state) => ({
+  ...state,
+  isLoading: true,
+  error: '',
+}));
+
+builder.addCase(addCar.fulfilled, (state, action) => ({
+  ...state,
+  isLoading: false,
+  success: true,
+  response: action.payload.data.data,
+}));
+
+builder.addCase(addCar.rejected, (state, action) => ({
+  ...state,
+  isLoading: false,
+  errors: action.payload.data.errors,
+}));
+    
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;
