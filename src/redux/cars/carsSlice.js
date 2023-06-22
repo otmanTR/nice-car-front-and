@@ -24,6 +24,15 @@ export const getCars = createAsyncThunk('getCars', async () => {
   return cars;
 });
 
+export const addCar = createAsyncThunk('addCar', async (id) => {
+  try {
+    const response = await axios.add(`${url}/${id}`);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
+
 export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
   try {
     const response = await axios.delete(`${url}/${id}`);
