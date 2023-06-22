@@ -14,7 +14,6 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Navbar to="/cars" />} />
-              {/* <Route exact path="/cars/:id" element={<CarDetails />} /> */}
               <Route path="/" element={<Home />} />
               <Route path="/car-delete" element={<DeleteCar />} />
             </Routes>
