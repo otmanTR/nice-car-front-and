@@ -3,6 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home } from './components/Home';
+import { DeleteCar } from './components/DeleteCar';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/car-delete" element={<DeleteCar />} />
             </Routes>
           </BrowserRouter>
         </Provider>

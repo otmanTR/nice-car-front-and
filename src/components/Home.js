@@ -1,45 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { FaSearch } from 'react-icons/fa';
 import { getCars } from '../redux/cars/carsSlice';
-import Cars from './Cars';
+import Cars from './cars/Cars';
 
 export const Home = () => {
-  const car = useSelector((state) => state.cars);
+  const cars = useSelector((state) => state.cars.cars) || [];
+  const carsContainerRef = useRef(null);
   const dispatch = useDispatch();
-  const [search, setSearch] = useState('');
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     dispatch(getCars());
   }, [dispatch]);
 
+  const scrollLeft = () => {
+    if (carsContainerRef.current) {
+      carsContainerRef.current.scrollBy({
+        left: -carsContainerRef.current.offsetWidth,
+        behavior: 'smooth',
+      });
+      setStartIndex((prevIndex) => Math.max(0, prevIndex - 1));
+    }
+  };
+
+  const scrollRight = () => {
+    if (carsContainerRef.current) {
+      carsContainerRef.current.scrollBy({
+        left: carsContainerRef.current.offsetWidth,
+        behavior: 'smooth',
+      });
+      setStartIndex((prevIndex) => Math.min(prevIndex + 1, cars.length - 3));
+    }
+  };
+
+  const visibleCars = cars.slice(startIndex, startIndex + 3);
+
   return (
     <div className="mainContainer">
-      <div>
-
-        <div className="container">
-
-          <div className="searchBox">
-            <input
-              type="text"
-              className="searchInput"
-              placeholder="Search..."
-              onChange={(event) => setSearch(event.target.value)}
-            />
-          </div>
-          <div>
-            <button aria-label="Mute volume" type="button" className="searchButton" onChange={(e) => setSearch(e.target.value)}>
-              <FaSearch />
-            </button>
-          </div>
+      <h2>Our Cars</h2>
+      <h3>Select your favorite car!</h3>
+      <div className="carItems">
+        <div className="carousel" ref={carsContainerRef}>
+          <Cars cars={visibleCars} />
         </div>
       </div>
-      <div className="carItems">
-        <Cars cars={car.filter((car) => (search.toLowerCase() === '' ? car : car.name.toLowerCase().includes(search.toLowerCase())))} />
-
+      <div className="arrow-buttons-container">
+        <button
+          className="arrow-button arrow-left"
+          onClick={scrollLeft}
+          type="button"
+        >
+          Previous
+        </button>
+        <button
+          className="arrow-button arrow-right"
+          onClick={scrollRight}
+          type="button"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
 };
 
-export default { Home };
+export default Home;

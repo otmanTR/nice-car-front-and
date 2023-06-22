@@ -1,0 +1,18 @@
+.homeCarsList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.car {
+  margin: 5px 5px 5px 5px;
+}
+
+.arrow-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  color: green;
+}

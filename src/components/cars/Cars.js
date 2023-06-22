@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Car from './CarCard';
-// import './Car.css';
+import './Car.css';
 
 // const Cars = (props) => {
 //   const { cars } = props;
