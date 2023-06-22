@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
-import './index.css';
+import './nav.css';
 import { NavLink } from 'react-router-dom';
 import myIcon from '../images/icon.jpg';
 
@@ -52,6 +52,28 @@ const Navbar = () => {
               Delete A Car
             </NavLink>
           </li>
+          <NavLink onClick={hideNavBar} to="/signin" activeClassName="active">
+            <button
+              type="button"
+              style={{
+                backgroundColor: 'green', color: 'white', padding: '10px', border: 'none', display: 'block', marginBottom: '10px',
+              }}
+            >
+              SIGN IN
+            </button>
+          </NavLink>
+
+          <NavLink onClick={hideNavBar} to="/signout" activeClassName="active">
+            <button
+              type="button"
+              style={{
+                backgroundColor: 'green', color: 'white', padding: '10px', border: 'none', display: 'block', marginBottom: '10px',
+              }}
+            >
+              SIGN OUT
+            </button>
+          </NavLink>
+
         </ul>
         <h3 className="navbar__footer">
           &copy;
