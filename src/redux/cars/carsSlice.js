@@ -2,11 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-
 };
-
 const url = 'http://127.0.0.1:3000/api/v1/cars';
-
 export const getCars = createAsyncThunk('getCars', async () => {
   const response = await axios.get(url);
   const carData = response.data;
@@ -32,7 +29,6 @@ export const addCar = createAsyncThunk('addCar', async (newCar) => {
     return error.message;
   }
 });
-
 export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
   try {
     const response = await axios.delete(`${url}/${id}`);
@@ -41,7 +37,6 @@ export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
     return error.message;
   }
 });
-
 export const carsSlice = createSlice({
   name: 'cars',
   initialState,
@@ -68,8 +63,6 @@ export const carsSlice = createSlice({
         newStatus: payload,
       }));
   },
-
 });
-
 export const { carsFilter } = carsSlice.actions;
 export default carsSlice.reducer;
