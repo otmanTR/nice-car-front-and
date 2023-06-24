@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home } from './components/Home';
 import { DeleteCar } from './components/DeleteCar';
+import { Reservations } from './components/Reservations';
+import { CreateReservation } from './components/ReservationForm';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/car-delete" element={<DeleteCar />} />
+              <Route path="/reservations" element={<Reservations />} />
+              <Route path="/create-reservation" element={<CreateReservation />} />
             </Routes>
           </BrowserRouter>
         </Provider>
@@ -21,5 +25,4 @@ function App() {
     </>
   );
 }
-
 export default App;
