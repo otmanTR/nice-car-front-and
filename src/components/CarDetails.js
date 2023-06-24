@@ -45,7 +45,7 @@ export const CarDetails = () => {
           {car.price}
           $
         </p>
-        <Link to="/car/$car.id}/reserve">
+        <Link to={`/car/${car.id}/reservation`}>
           <button type="button" className="car-details-button"> Reserve</button>
         </Link>
       </div>
