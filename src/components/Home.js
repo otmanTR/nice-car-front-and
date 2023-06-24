@@ -2,17 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars } from '../redux/cars/carsSlice';
 import Cars from './cars/Cars';
-​
+
 export const Home = () => {
   const cars = useSelector((state) => state.cars.cars) || [];
   const carsContainerRef = useRef(null);
   const dispatch = useDispatch();
   const [startIndex, setStartIndex] = useState(0);
-​
+
   useEffect(() => {
     dispatch(getCars());
   }, [dispatch]);
-​
+
   const scrollLeft = () => {
     if (carsContainerRef.current) {
       carsContainerRef.current.scrollBy({
@@ -22,7 +22,7 @@ export const Home = () => {
       setStartIndex((prevIndex) => Math.max(0, prevIndex - 1));
     }
   };
-​
+
   const scrollRight = () => {
     if (carsContainerRef.current) {
       carsContainerRef.current.scrollBy({
@@ -32,9 +32,9 @@ export const Home = () => {
       setStartIndex((prevIndex) => Math.min(prevIndex + 1, cars.length - 3));
     }
   };
-​
+
   const visibleCars = cars.slice(startIndex, startIndex + 3).filter(Boolean);
-​
+
   return (
     <div className="mainContainer">
       <h2>Our Cars</h2>
@@ -63,5 +63,5 @@ export const Home = () => {
     </div>
   );
 };
-​
+
 export default Home;

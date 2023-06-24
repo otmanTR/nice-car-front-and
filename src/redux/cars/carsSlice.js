@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-​
+
 const initialState = {
   cars: [],
 };
@@ -21,7 +21,7 @@ export const getCars = createAsyncThunk('getCars', async () => {
   });
   return cars;
 });
-​
+
 export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
   try {
     const response = await axios.delete(`${url}/${id}`);
