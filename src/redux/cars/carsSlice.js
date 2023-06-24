@@ -22,6 +22,14 @@ export const getCars = createAsyncThunk('getCars', async () => {
   return cars;
 });
 
+export const addCar = createAsyncThunk('addCar', async (newCar) => {
+  try {
+    const response = await axios.post(url, newCar);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
 export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
   try {
     const response = await axios.delete(`${url}/${id}`);
@@ -36,6 +44,15 @@ export const carsSlice = createSlice({
   reducers: {
   },
   extraReducers: (builder) => {
+    builder
+      .addCase(getCars.fulfilled, (state, action) => {
+        state.cars = action.payload;
+      })
+      .addCase(addCar.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'succeded',
+        newStatus: payload,
+      }));
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;

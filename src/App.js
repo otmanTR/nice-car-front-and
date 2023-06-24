@@ -3,6 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home } from './components/Home';
+import AddCar from './components/AddCar';
 import { DeleteCar } from './components/DeleteCar';
 import { Reservations } from './components/Reservations';
 import { CreateReservation } from './components/ReservationForm';
@@ -16,6 +17,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/add_car" element={<AddCar />} />
               <Route path="/car-delete" element={<DeleteCar />} />
               <Route path="/reservations" element={<Reservations />} />
               <Route path="/create-reservation" element={<CreateReservation />} />
