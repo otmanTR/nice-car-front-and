@@ -20,6 +20,9 @@ const AddCar = () => {
         model,
         price,
       }));
+      console.log('Added car successfully:', response);
+      console.log(response);
+      // Update message state with the success message from response
       setMessage('Added car successfully' || '');
     } catch (error) {
       console.error('Add car failed:', error);
