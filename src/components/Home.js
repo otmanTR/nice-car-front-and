@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars } from '../redux/cars/carsSlice';
 import Cars from './cars/Cars';
+import { Navbar } from '../Navbar/Navbar';
 
 export const Home = () => {
   const cars = useSelector((state) => state.cars.cars) || [];
@@ -37,28 +38,33 @@ export const Home = () => {
 
   return (
     <div className="mainContainer">
-      <h2>Our Cars</h2>
-      <h3>Select your favorite car!</h3>
-      <div className="carItems">
-        <div className="carousel" ref={carsContainerRef}>
-          <Cars cars={visibleCars} />
-        </div>
+      <div>
+        <Navbar />
       </div>
-      <div className="arrow-buttons-container">
-        <button
-          className="arrow-button arrow-left"
-          onClick={scrollLeft}
-          type="button"
-        >
-          Previous
-        </button>
-        <button
-          className="arrow-button arrow-right"
-          onClick={scrollRight}
-          type="button"
-        >
-          Next
-        </button>
+      <div>
+        <h2>Our Cars</h2>
+        <h3>Select your favorite car!</h3>
+        <div className="carItems">
+          <div className="carousel" ref={carsContainerRef}>
+            <Cars cars={visibleCars} />
+          </div>
+        </div>
+        <div className="arrow-buttons-container">
+          <button
+            className="arrow-button arrow-left"
+            onClick={scrollLeft}
+            type="button"
+          >
+            Previous
+          </button>
+          <button
+            className="arrow-button arrow-right"
+            onClick={scrollRight}
+            type="button"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

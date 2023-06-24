@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { getCars } from '../redux/cars/carsSlice';
+import { Navbar } from '../Navbar/Navbar';
 
 export const CarDetails = () => {
   const { carId } = useParams();
@@ -23,26 +24,31 @@ export const CarDetails = () => {
   }
 
   return (
-    <div>
-      <h2>Car Details</h2>
-      <img className="carImage" src={car.image} alt={car.name} />
-      <p>
-        Name:
-        {car.name}
-      </p>
+    <div className="mainContainer">
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <h2>Car Details</h2>
+        <img className="carImage" src={car.image} alt={car.name} />
+        <p>
+          Name:
+          {car.name}
+        </p>
 
-      <p>
-        Model:
-        {car.model}
-      </p>
-      <p>
-        Price:
-        {car.price}
-        $
-      </p>
-      <Link to="/car/$car.id}/reserve">
-        <button type="button" className="car-details-button"> Reserve</button>
-      </Link>
+        <p>
+          Model:
+          {car.model}
+        </p>
+        <p>
+          Price:
+          {car.price}
+          $
+        </p>
+        <Link to={`/car/${car.id}/reservation`}>
+          <button type="button" className="car-details-button"> Reserve</button>
+        </Link>
+      </div>
     </div>
   );
 };
