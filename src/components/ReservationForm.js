@@ -23,8 +23,12 @@ export const CreateReservation = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (reservationData.start_date && reservationData.end_date
-        && reservationData.city && reservationData.car_id) {
+    if (
+      reservationData.start_date
+      && reservationData.end_date
+      && reservationData.city
+      && reservationData.car_id
+    ) {
       dispatch(createReservation(reservationData));
       setReservationData({
         start_date: '',
@@ -45,14 +49,14 @@ export const CreateReservation = () => {
         <h2>Create Reservation</h2>
         <form onSubmit={handleSubmit}>
           <input
-            type="text"
+            type="date" // Update the input type to "date"
             value={reservationData.start_date}
             onChange={(e) => setReservationData({ ...reservationData, start_date: e.target.value })}
             placeholder="Start Date"
           />
 
           <input
-            type="text"
+            type="date" // Update the input type to "date"
             value={reservationData.end_date}
             onChange={(e) => setReservationData({ ...reservationData, end_date: e.target.value })}
             placeholder="End Date"
@@ -71,7 +75,9 @@ export const CreateReservation = () => {
           >
             <option value="">Select a Car</option>
             {cars.map((car) => (
-              <option key={car.id} value={car.id}>{car.name}</option>
+              <option key={car.id} value={car.id}>
+                {car.name}
+              </option>
             ))}
           </select>
 
