@@ -47,13 +47,17 @@ export const carsSlice = createSlice({
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;
-        state.cars = state.cars.filter((car) => car !== undefined);
       })
       .addCase(addCar.fulfilled, (state, { payload }) => ({
         ...state,
         status: 'succeded',
         newStatus: payload,
       }));
+    builder
+      .addCase(getCars.fulfilled, (state, action) => {
+        state.cars = action.payload;
+        state.cars = state.cars.filter((car) => car !== undefined);
+      })
       .addCase(deleteCar.fulfilled, (state, action) => {
         // Find the index of the deleted car in the state
         const index = state.cars.findIndex((car) => car.id === action.payload);
