@@ -19,7 +19,6 @@ export const CreateReservation = () => {
   useEffect(() => {
     dispatch(getCars());
   }, [dispatch]);
-  console.log('cars here', cars);
 
   const handleSubmit = (e) => {
     e.preventDefault();

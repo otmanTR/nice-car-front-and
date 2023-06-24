@@ -40,6 +40,13 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link to="/create-reservation" className="link">
+
+              Booking
+
+            </Link>
+          </li>
+          <li>
             <Link to="/reservations" className="link">
 
               Reservations
