@@ -1,12 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+​
 const initialState = {
-
+  cars: [],
 };
-
 const url = 'http://127.0.0.1:3000/api/v1/cars';
-
 export const getCars = createAsyncThunk('getCars', async () => {
   const response = await axios.get(url);
   const carData = response.data;
@@ -23,8 +21,7 @@ export const getCars = createAsyncThunk('getCars', async () => {
   });
   return cars;
 });
-
-export const addCar = createAsyncThunk('addCar', async (newCar) => {
+​export const addCar = createAsyncThunk('addCar', async (newCar) => {
   try {
     const response = await axios.post(url, newCar);
     return response.data;
@@ -32,7 +29,6 @@ export const addCar = createAsyncThunk('addCar', async (newCar) => {
     return error.message;
   }
 });
-
 export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
   try {
     const response = await axios.delete(`${url}/${id}`);
@@ -41,7 +37,6 @@ export const deleteCar = createAsyncThunk('deleteCar', async (id) => {
     return error.message;
   }
 });
-
 export const carsSlice = createSlice({
   name: 'cars',
   initialState,
@@ -49,24 +44,29 @@ export const carsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+    .addCase(getCars.fulfilled, (state, action) => {
+      state.cars = action.payload;
+    })
+    .addCase(addCar.fulfilled, (state, { payload }) => ({
+      ...state,
+      status: 'succeded',
+      newStatus: payload,
+    }));
+    
+    builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;
+        state.cars = state.cars.filter((car) => car !== undefined);
       })
-      .addCase(addCar.fulfilled, (state, { payload }) => ({
-        ...state,
-        status: 'succeded',
-        newStatus: payload,
-      }));
-
-    builder
-      .addCase(deleteCar.fulfilled, (state, { payload }) => ({
-        ...state,
-        status: 'succeded',
-        newStatus: payload,
-      }));
+      .addCase(deleteCar.fulfilled, (state, action) => {
+        // Find the index of the deleted car in the state
+        const index = state.cars.findIndex((car) => car.id === action.payload);
+        if (index !== -1) {
+          // Remove the car from the state by its index
+          state.cars.splice(index, 1);
+        }
+      });
   },
-
 });
-
 export const { carsFilter } = carsSlice.actions;
 export default carsSlice.reducer;
