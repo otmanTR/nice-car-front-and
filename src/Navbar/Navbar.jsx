@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './index.css';
-import { NavLink } from 'react-router-dom';
 import myIcon from '../images/icon.jpg';
 
 export const Navbar = () => {
@@ -33,24 +33,28 @@ export const Navbar = () => {
         <img className="title" src={myIcon} alt="Rent It icon" />
         <ul className="navbarlinks">
           <li>
-            <NavLink onClick={hideNavBar} to="cars" activeClassName="active">
+            <Link to="/" className="link">
+
               Cars
-            </NavLink>
+
+            </Link>
           </li>
           <li>
-            <NavLink onClick={hideNavBar} to="my-reservations" activeClassName="active">
+            <Link to="/reservations" className="link">
+
               Reservations
-            </NavLink>
+
+            </Link>
           </li>
           <li>
-            <NavLink onClick={hideNavBar} to="add" activeClassName="active">
+            <Link to="/car-delete" className="link">
               Add A Car
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink onClick={hideNavBar} to="delete" activeClassName="active">
+            <Link to="/car-delete" className="link">
               Delete A Car
-            </NavLink>
+            </Link>
           </li>
         </ul>
         <h3 className="navbar__footer">
