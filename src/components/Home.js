@@ -33,7 +33,7 @@ export const Home = () => {
     }
   };
 
-  const visibleCars = cars.slice(startIndex, startIndex + 3);
+  const visibleCars = cars.slice(startIndex, startIndex + 3).filter(Boolean);
 
   return (
     <div className="mainContainer">

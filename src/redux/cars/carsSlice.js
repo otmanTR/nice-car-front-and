@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
+  cars: [],
 };
 const url = 'http://127.0.0.1:3000/api/v1/cars';
 export const getCars = createAsyncThunk('getCars', async () => {
@@ -46,22 +47,21 @@ export const carsSlice = createSlice({
     builder
       .addCase(getCars.fulfilled, (state, action) => {
         state.cars = action.payload;
+        state.cars = state.cars.filter((car) => car !== undefined);
       })
       .addCase(addCar.fulfilled, (state, { payload }) => ({
         ...state,
         status: 'succeded',
         newStatus: payload,
       }));
-
-    builder
-      .addCase(getCars.fulfilled, (state, action) => {
-        state.cars = action.payload;
-      })
-      .addCase(deleteCar.fulfilled, (state, { payload }) => ({
-        ...state,
-        status: 'succeded',
-        newStatus: payload,
-      }));
+      .addCase(deleteCar.fulfilled, (state, action) => {
+        // Find the index of the deleted car in the state
+        const index = state.cars.findIndex((car) => car.id === action.payload);
+        if (index !== -1) {
+          // Remove the car from the state by its index
+          state.cars.splice(index, 1);
+        }
+      });
   },
 });
 export const { carsFilter } = carsSlice.actions;
