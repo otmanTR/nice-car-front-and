@@ -59,6 +59,9 @@ export const carsSlice = createSlice({
       }));
 
     builder
+      .addCase(getCars.fulfilled, (state, action) => {
+        state.cars = action.payload;
+      })
       .addCase(deleteCar.fulfilled, (state, { payload }) => ({
         ...state,
         status: 'succeded',
