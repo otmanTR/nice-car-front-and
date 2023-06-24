@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars, deleteCar } from '../redux/cars/carsSlice';
+import { Navbar } from '../Navbar/Navbar';
 
 export const DeleteCar = () => {
   const cars = useSelector((state) => state.cars.cars) || [];
@@ -29,19 +30,23 @@ export const DeleteCar = () => {
 
   return (
     <div className="mainContainer">
-      <h2>Delete the Car</h2>
-      <div className="carItems">
-        {cars.map((car) => (
-          <div key={car.id}>
-            <img src={car.image} alt={car.name} />
-            <h2>
-              {car.name}
-            </h2>
-            <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete</button>
-          </div>
-        ))}
+      <div>
+        <Navbar />
       </div>
-
+      <div>
+        <h2>Delete the Car</h2>
+        <div className="carItems">
+          {cars.map((car) => (
+            <div key={car.id}>
+              <img src={car.image} alt={car.name} />
+              <h2>
+                {car.name}
+              </h2>
+              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete</button>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

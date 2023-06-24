@@ -3,9 +3,9 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import React, { useRef } from 'react';
 import './index.css';
 import { NavLink } from 'react-router-dom';
-import myIcon from '../../images/icon.jpg';
+import myIcon from '../images/icon.jpg';
 
-const Navbar = () => {
+export const Navbar = () => {
   const navRef = useRef();
   useSelector((state) => state.authentication);
 
