@@ -54,7 +54,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/car-delete" className="link">
+            <Link to="/add_car" className="link">
               Add A Car
             </Link>
           </li>

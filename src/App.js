@@ -3,7 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home } from './components/Home';
-import AddCar from './components/AddCar';
+import { AddCar } from './components/AddCar';
 import { DeleteCar } from './components/DeleteCar';
 import { Reservations } from './components/Reservations';
 import { CreateReservation } from './components/ReservationForm';
