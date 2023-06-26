@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../redux/users/usersSlice';
+import './CreateUserForm.css';
 
 export const CreateUserForm = () => {
   const dispatch = useDispatch();
@@ -19,33 +21,35 @@ export const CreateUserForm = () => {
   };
 
   return (
-    <div className="create-user-form">
-      <h2>Create User</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">
-            Name:
+    <div className="container">
+      <div className="create-user-form">
+        <h2 className="form-heading">Create User</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="username">Name:</label>
             <input
               type="text"
               id="username"
+              className="form-control"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              aria-labelledby="username"
             />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="email">
-            Email:
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
             <input
               type="email"
               id="email"
+              className="form-control"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              aria-labelledby="email"
             />
-          </label>
-        </div>
-        <button type="submit">Create User</button>
-      </form>
+          </div>
+          <button type="submit" className="btn btn-primary">Create User</button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,47 @@
+body {
+  background-image: url('C:\Users\Admin\nice-car-front-and\src\images\car2.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.create-user-form {
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #0c0b0b;
+  border-radius: 5px;
+  background-color: rgb(176, 183, 178);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  width: 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  color: purple;
+}
+
+@media (min-width: 576px) {
+  .create-user-form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .create-user-form {
+    width: 500px;
+  }
+}

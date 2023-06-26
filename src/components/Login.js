@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../redux/users/usersSlice';
+import './LoginForm.css';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -13,21 +14,26 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
-      <h2>Or</h2>
-      <Link to="/registration" className="link">
-        <button type="button">Register</button>
-      </Link>
+    <div className="container">
+      <div className="login-form">
+        <h2 className="login-heading">Login</h2>
+        <form onSubmit={handleLogin}>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary btn-login">Login</button>
+        </form>
+        <h2 className="or-heading">Or</h2>
+        <Link to="/registration" className="link">
+          <button type="button" className="btn btn-secondary btn-register">Register</button>
+        </Link>
+      </div>
     </div>
   );
 };
