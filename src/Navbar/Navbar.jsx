@@ -33,7 +33,7 @@ export const Navbar = () => {
         <img className="title" src={myIcon} alt="Rent It icon" />
         <ul className="navbarlinks">
           <li>
-            <Link to="/" className="link">
+            <Link to="/home" className="link">
 
               Cars
 

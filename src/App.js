@@ -9,6 +9,8 @@ import { Reservations } from './components/Reservations';
 import { CreateReservation } from './components/ReservationForm';
 import { CarDetails } from './components/CarDetails';
 import { CarReservation } from './components/CarReservation';
+import { CreateUserForm } from './components/Registration';
+import { LoginForm } from './components/Login';
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
         <Provider store={store}>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<LoginForm />} />
+              <Route path="/registration" element={<CreateUserForm />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/add_car" element={<AddCar />} />
               <Route path="/car-delete" element={<DeleteCar />} />
               <Route path="/reservations" element={<Reservations />} />
