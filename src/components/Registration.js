@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../redux/users/usersSlice';
 
@@ -46,6 +47,9 @@ export const CreateUserForm = () => {
         </div>
         <button type="submit">Create User</button>
       </form>
+      <Link to="/" className="link">
+        <button type="button">Log In</button>
+      </Link>
     </div>
   );
 };
