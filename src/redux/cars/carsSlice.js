@@ -55,10 +55,8 @@ export const carsSlice = createSlice({
         newStatus: payload,
       }))
       .addCase(deleteCar.fulfilled, (state, action) => {
-        // Find the index of the deleted car in the state
         const index = state.cars.findIndex((car) => car.id === action.payload);
         if (index !== -1) {
-          // Remove the car from the state by its index
           state.cars.splice(index, 1);
         }
       });

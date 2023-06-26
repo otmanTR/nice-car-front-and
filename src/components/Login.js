@@ -11,7 +11,6 @@ export const LoginForm = () => {
   useEffect(() => {
     if (successMessage) {
       setTimeout(() => {
-        // Navigate to "/home" after a delay of 2 seconds
         window.location.href = '/home';
       }, 2000);
     }

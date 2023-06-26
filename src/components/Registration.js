@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../redux/users/usersSlice';
 
 export const CreateUserForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const { error, successMessage } = useSelector((state) => state.users);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,9 +19,19 @@ export const CreateUserForm = () => {
     setEmail('');
   };
 
+  useEffect(() => {
+    if (successMessage) {
+      setTimeout(() => {
+        window.location.href = '/home';
+      }, 2000);
+    }
+  }, [successMessage]);
+
   return (
     <div className="create-user-form">
       <h2>Create User</h2>
+      {error && <p className="error">{error}</p>}
+      {successMessage && <p className="success">{successMessage}</p>}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">
@@ -47,9 +57,6 @@ export const CreateUserForm = () => {
         </div>
         <button type="submit">Create User</button>
       </form>
-      <Link to="/" className="link">
-        <button type="button">Log In</button>
-      </Link>
     </div>
   );
 };
