@@ -44,9 +44,9 @@ export const CarReservation = () => {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="reserve-container">
         <h2>Reservation Form</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="reserve-form " onSubmit={handleSubmit}>
           <label htmlFor="city">
             City:
             <input type="text" id="city" name="city" value={reservationData.city} onChange={handleChange} />
@@ -59,8 +59,9 @@ export const CarReservation = () => {
             End Date:
             <input type="date" id="end_date" name="end_date" value={reservationData.end_date} onChange={handleChange} />
           </label>
-          <button type="submit">Create Reservation</button>
+
         </form>
+        <button className="reserve-button" type="submit">Create Reservation</button>
       </div>
     </div>
   );

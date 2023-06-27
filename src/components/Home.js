@@ -42,14 +42,9 @@ export const Home = () => {
         <Navbar />
       </div>
       <div className="home-bg">
-        <h2>Our Cars</h2>
-        <h3>Select your favorite car!</h3>
-        <div className="carItems">
-          <div className="carousel" ref={carsContainerRef}>
-            <Cars cars={visibleCars} />
-          </div>
-        </div>
-        <div className="arrow-buttons-container">
+        <h2 className="home-header">Our Cars</h2>
+        <h3 className="home-header">Select your favorite car!</h3>
+        <div className="arrows-cars">
           <button
             className="arrow-button arrow-left"
             onClick={scrollLeft}
@@ -57,6 +52,12 @@ export const Home = () => {
           >
             Previous
           </button>
+          <div className="carItems">
+            <div className="carousel" ref={carsContainerRef}>
+              <Cars cars={visibleCars} />
+            </div>
+          </div>
+
           <button
             className="arrow-button arrow-right"
             onClick={scrollRight}

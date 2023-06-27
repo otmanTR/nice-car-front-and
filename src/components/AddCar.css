@@ -41,3 +41,27 @@
   background: rgb(5, 197, 5);
   transition: all 0.3s;
 }
+
+.car-details-button {
+  background: rgb(6, 165, 6);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.car-details-button:hover {
+  background: rgb(5, 197, 5);
+  transition: all 0.3s;
+}
+
+.details {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
