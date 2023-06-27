@@ -50,7 +50,7 @@ export const CreateReservation = () => {
         <h2>Create Reservation</h2>
         <form className="reserve-form" onSubmit={handleSubmit}>
           <input
-            type="date" // Update the input type to "date"
+            type="date"
             value={reservationData.start_date}
             onChange={(e) => setReservationData({ ...reservationData, start_date: e.target.value })}
             placeholder="Start Date"
