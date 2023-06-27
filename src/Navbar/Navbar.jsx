@@ -33,7 +33,7 @@ export const Navbar = () => {
         <img className="title" src={myIcon} alt="Rent It icon" />
         <ul className="navbarlinks">
           <li>
-            <Link to="/" className="link">
+            <Link to="/home" className="link">
 
               Cars
 
@@ -54,7 +54,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/car-delete" className="link">
+            <Link to="/add_car" className="link">
               Add A Car
             </Link>
           </li>
