@@ -27,8 +27,8 @@ export const LoginForm = () => {
       <div className="login-form">
         <h2 className="login-heading">Login</h2>
         {error && <p className="error">{error}</p>}
-      {successMessage && <p className="success">{successMessage}</p>}
-      <form onSubmit={handleLogin}>
+        {successMessage && <p className="success">{successMessage}</p>}
+        <form onSubmit={handleLogin}>
           <div className="form-group">
             <input
               type="text"
@@ -38,10 +38,10 @@ export const LoginForm = () => {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-  
-        <button type="submit" className="btn btn-primary btn-login">Login</button>
-  
-      </form>
+
+          <button type="submit" className="btn btn-primary btn-login">Login</button>
+
+        </form>
         <h2 className="or-heading">Or</h2>
         <Link to="/registration" className="link">
           <button type="button" className="btn btn-secondary btn-register">Register</button>

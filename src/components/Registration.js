@@ -34,8 +34,8 @@ export const CreateUserForm = () => {
       <div className="create-user-form">
         <h2 className="form-heading">Create User</h2>
         {error && <p className="error">{error}</p>}
-      {successMessage && <p className="success">{successMessage}</p>}
-      <form className="register-form" onSubmit={handleSubmit}>
+        {successMessage && <p className="success">{successMessage}</p>}
+        <form className="register-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Name</label>
             <input
