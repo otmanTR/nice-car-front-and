@@ -153,7 +153,7 @@ To run test execute the following command:
 
 - LinkedIn: [@joseph-david](https://www.linkedin.com/in/joseph-david-/)
 
-👤 **Burak Otman**
+👤 **Recep Burak Otman**
 
 - GitHub: [@otmanTR](https://github.com/otmanTR)
 
@@ -210,6 +210,6 @@ If you like this project please leave a star. Thank you 🙏
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
