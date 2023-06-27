@@ -16,6 +16,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: white;
 }
 
 .reservationsItems {
@@ -23,6 +24,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-top: 20px;
+  width: 100%;
+  margin-left: 15px;
 }
 
 .reservationItem {
@@ -35,19 +38,19 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
 }
 
 .reservationImage {
-  width: 200px;
-  height: 200px;
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .reservationName {
   font-size: 18px;
-  font-weight: 600;
+  width: 100%;
 }
 
 .reservationStartDate,
@@ -55,5 +58,16 @@
   font-size: 14px;
   margin-top: 5px;
   font-style: oblique;
-  font-weight: 600;
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  .reservationsItems {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 15px;
+  }
 }

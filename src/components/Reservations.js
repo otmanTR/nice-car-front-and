@@ -17,7 +17,7 @@ const Reservations = () => {
       <div>
         <Navbar />
       </div>
-      <div className="mainContent">
+      <div className="deleteContaine">
         <h2 className="pageTitle">Reservations</h2>
         <div className="reservationsItems">
           {reservations.map((reservation) => (
