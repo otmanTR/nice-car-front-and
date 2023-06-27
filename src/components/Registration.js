@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../redux/users/usersSlice';
 
-export const CreateUserForm = () => {
+export function CreateUserForm() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -59,6 +59,6 @@ export const CreateUserForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default CreateUserForm;

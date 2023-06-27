@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 import './index.css';
 import myIcon from '../images/icon.jpg';
 
-export const Navbar = () => {
+export function Navbar() {
   const navRef = useRef();
   useSelector((state) => state.authentication);
 
@@ -72,6 +72,6 @@ export const Navbar = () => {
       </nav>
     </div>
   );
-};
+}
 
 export default Navbar;

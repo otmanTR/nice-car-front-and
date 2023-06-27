@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getReservations } from '../redux/reservations/reservationsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
-export const Reservations = () => {
+export function Reservations() {
   const reservations = useSelector((state) => state.reservations.reservations) || [];
   const dispatch = useDispatch();
 
@@ -41,6 +41,6 @@ export const Reservations = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Reservations;

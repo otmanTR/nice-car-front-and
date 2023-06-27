@@ -4,7 +4,7 @@ import { getCars } from '../redux/cars/carsSlice';
 import Cars from './cars/Cars';
 import { Navbar } from '../Navbar/Navbar';
 
-export const Home = () => {
+export function Home() {
   const cars = useSelector((state) => state.cars.cars) || [];
   const carsContainerRef = useRef(null);
   const dispatch = useDispatch();
@@ -68,6 +68,6 @@ export const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { createReservation } from '../redux/reservations/reservationsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
-export const CarReservation = () => {
+export function CarReservation() {
   const dispatch = useDispatch();
   const { carId } = useParams();
 
@@ -64,6 +64,6 @@ export const CarReservation = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CarReservation;

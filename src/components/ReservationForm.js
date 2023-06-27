@@ -4,7 +4,7 @@ import { createReservation } from '../redux/reservations/reservationsSlice';
 import { getCars } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
-export const CreateReservation = () => {
+export function CreateReservation() {
   const [reservationData, setReservationData] = useState({
     start_date: '',
     end_date: '',
@@ -86,6 +86,6 @@ export const CreateReservation = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CreateReservation;

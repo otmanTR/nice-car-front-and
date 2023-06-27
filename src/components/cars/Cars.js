@@ -5,7 +5,7 @@ import './Car.css';
 
 // const Cars = (props) => {
 //   const { cars } = props;
-const Cars = ({ cars }) => {
+function Cars({ cars }) {
   if (!cars || cars.length === 0) {
     return <div>No cars available</div>;
   }
@@ -25,7 +25,7 @@ const Cars = ({ cars }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default Cars;
 

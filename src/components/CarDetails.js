@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getCars } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
-export const CarDetails = () => {
+export function CarDetails() {
   const { carId } = useParams();
   const dispatch = useDispatch();
   const cars = useSelector((state) => state.cars.cars);
@@ -51,6 +51,6 @@ export const CarDetails = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CarDetails;

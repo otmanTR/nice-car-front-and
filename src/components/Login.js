@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../redux/users/usersSlice';
 
-export const LoginForm = () => {
+export function LoginForm() {
   const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const { error, successMessage } = useSelector((state) => state.users);
@@ -43,6 +43,6 @@ export const LoginForm = () => {
       </Link>
     </div>
   );
-};
+}
 
 export default LoginForm;
