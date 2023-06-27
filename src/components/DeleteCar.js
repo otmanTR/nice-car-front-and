@@ -20,7 +20,7 @@ export const DeleteCar = () => {
         if (result) {
           window.location.reload();
         } else {
-          console.error('Error deleting car:', action.error.message);
+          throw new Error('Error deleting car');
         }
       })
       .catch((error) => {
