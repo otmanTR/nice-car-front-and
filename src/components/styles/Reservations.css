@@ -1,0 +1,73 @@
+.mainContainer {
+  display: flex;
+  background: none;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.reservationsItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  margin-left: 15px;
+}
+
+.reservationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.reservationImage {
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.reservationName {
+  font-size: 18px;
+  width: 100%;
+}
+
+.reservationStartDate,
+.reservationEndDate {
+  font-size: 14px;
+  margin-top: 5px;
+  font-style: oblique;
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  .reservationsItems {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 15px;
+  }
+}

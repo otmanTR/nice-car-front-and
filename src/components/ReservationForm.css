@@ -1,0 +1,88 @@
+.reserve-container {
+  background: #fff6;
+  border-radius: 20px;
+  margin: 80px auto;
+  padding: 2% 4%;
+  height: 50%;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+}
+
+.reserve-form {
+  display: flex;
+  margin: 50px auto;
+}
+
+.reserve-input,
+select {
+  border: none;
+  outline: none;
+  background: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 0 10px;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  width: 90%;
+}
+
+select {
+  margin-right: 30px;
+}
+
+.reserve-button {
+  border: none;
+  background: rgb(6, 164, 6);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 12px 30px;
+}
+
+.reserve-button:hover {
+  transition: all 0.3s;
+  background: rgb(51, 230, 51);
+}
+
+@media (max-width: 769px) {
+  .reserve-container {
+    background: #fff6;
+    border-radius: 20px;
+    margin: 80px;
+    padding: 2% 4%;
+    height: 50%;
+    box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  .reserve-form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+
+  .reserve-input,
+  select {
+    border: none;
+    outline: none;
+    background: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 90%;
+    box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  select {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .reserve-button {
+    border: none;
+    background: rgb(6, 164, 6);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 12px 10px;
+  }
+}

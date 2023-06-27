@@ -33,16 +33,16 @@ export const DeleteCar = () => {
       <div>
         <Navbar />
       </div>
-      <div>
-        <h2>Delete the Car</h2>
+      <div className="deleteContainer">
+        <h2 className="deleteHead">Delete the Car</h2>
         <div className="carItems">
           {cars.map((car) => (
-            <div key={car.id}>
-              <img src={car.image} alt={car.name} />
-              <h2>
+            <div className="carItemss" key={car.id}>
+              <img className="carImage" src={car.image} alt={car.name} />
+              <h2 className="carName">
                 {car.name}
               </h2>
-              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete</button>
+              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete Car</button>
             </div>
           ))}
         </div>

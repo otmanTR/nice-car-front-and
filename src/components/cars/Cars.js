@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Car from './CarCard';
 import './Car.css';
 
-// const Cars = (props) => {
-//   const { cars } = props;
 const Cars = ({ cars }) => {
   if (!cars || cars.length === 0) {
     return <div>No cars available</div>;
