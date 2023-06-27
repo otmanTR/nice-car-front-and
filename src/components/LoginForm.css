@@ -1,51 +1,58 @@
 body {
-  background-image: url('C:\Users\Admin\nice-car-front-and\src\images\car2.webp');
-  background-repeat: no-repeat;
+  background-image: url('/src/images/pexels-mahesh-reddy-14380639.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .login-form {
-  width: 300px;
+  width: 400px;
   height: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #0c0b0b;
-  border-radius: 5px;
-  background-color: rgb(176, 183, 178);
+  margin: 150px auto;
+  background: #fff6;
+  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
 }
 
 .login-heading {
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #000;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  padding-bottom: 30px;
 }
 
-.btn-login {
-  width: 50%;
-  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
-  opacity: 0.6;
-  cursor: not-allowed;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.form-control {
   outline: none;
-  color: purple;
+  border: none;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.btn {
+  border: none;
+  background: rgb(6, 164, 6);
+  color: white;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 0.3s;
+  background: rgb(51, 230, 51);
 }
 
 .or-heading {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.btn-register {
-  width: 50%;
-  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
-  opacity: 0.6;
-  cursor: not-allowed;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: purple;
+  padding: 7px 0;
 }
 
 @media (min-width: 576px) {

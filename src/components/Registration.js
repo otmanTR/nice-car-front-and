@@ -24,9 +24,9 @@ export const CreateUserForm = () => {
     <div className="container">
       <div className="create-user-form">
         <h2 className="form-heading">Create User</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="register-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Name:</label>
+            <label htmlFor="username">Name</label>
             <input
               type="text"
               id="username"
@@ -37,7 +37,7 @@ export const CreateUserForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -47,7 +47,7 @@ export const CreateUserForm = () => {
               aria-labelledby="email"
             />
           </div>
-          <button type="submit" className="btn btn-primary">Create User</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>

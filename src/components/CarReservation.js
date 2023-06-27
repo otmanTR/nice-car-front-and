@@ -41,7 +41,7 @@ export const CarReservation = () => {
   };
 
   return (
-    <div className="mainContainer">
+    <div className="mainContainer reservation-container">
       <div>
         <Navbar />
       </div>
