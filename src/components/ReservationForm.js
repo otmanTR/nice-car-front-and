@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createReservation } from '../redux/reservations/reservationsSlice';
 import { getCars } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
+import './styles/CreateReservation.css';
 
 export const CreateReservation = () => {
   const [reservationData, setReservationData] = useState({

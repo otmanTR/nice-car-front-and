@@ -5,12 +5,13 @@ import store from './redux/store';
 import { Home } from './components/Home';
 import { AddCar } from './components/AddCar';
 import { DeleteCar } from './components/DeleteCar';
-import { Reservations } from './components/Reservations';
+// import { Reservations } from './components/Reservations';
 import { CreateReservation } from './components/ReservationForm';
 import { CarDetails } from './components/CarDetails';
 import { CarReservation } from './components/CarReservation';
 import { CreateUserForm } from './components/Registration';
 import { LoginForm } from './components/Login';
+import Reservations from './components/Reservations';
 
 function App() {
   return (
