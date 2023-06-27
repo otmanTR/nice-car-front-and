@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addCar } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
+import './AddCar.css';
 
 export const AddCar = () => {
   const [name, setName] = useState('');
@@ -37,8 +38,7 @@ export const AddCar = () => {
       </div>
       <div className="add-car-form">
         <p>{message}</p>
-        <p className="add-car-title">Add a car</p>
-        <div className="inputs">
+        <div className="add-car-inputs">
           <input className="name-car-input" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
           <input className="image-input" type="text" placeholder="Image link" value={image} onChange={(e) => setImage(e.target.value)} />
           <input className="model-input" type="text" placeholder="Car Model" value={model} onChange={(e) => setModel(e.target.value)} />

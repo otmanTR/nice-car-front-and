@@ -30,7 +30,6 @@ export const CarReservation = () => {
 
     dispatch(createReservation(newReservation));
 
-    // Reset form fields
     setReservationData({
       start_date: '',
       end_date: '',
@@ -41,7 +40,7 @@ export const CarReservation = () => {
   };
 
   return (
-    <div className="mainContainer">
+    <div className="mainContainer reservation-container">
       <div>
         <Navbar />
       </div>

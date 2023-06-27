@@ -41,7 +41,7 @@ export const Home = () => {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="home-bg">
         <h2>Our Cars</h2>
         <h3>Select your favorite car!</h3>
         <div className="carItems">
