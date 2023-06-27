@@ -59,9 +59,8 @@ export const CarReservation = () => {
             End Date:
             <input type="date" id="end_date" name="end_date" value={reservationData.end_date} onChange={handleChange} />
           </label>
-
+          <button className="reserve-button" type="submit">Create Reservation</button>
         </form>
-        <button className="reserve-button" type="submit">Create Reservation</button>
       </div>
     </div>
   );

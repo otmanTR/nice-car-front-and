@@ -17,10 +17,7 @@ export const DeleteCar = () => {
       .then((action) => {
         const result = action.payload;
         if (result !== undefined && result !== null && result !== '') {
-          console.log('Car deleted successfully.');
           window.location.reload();
-        } else {
-          console.error('Error deleting car:', action.error.message);
         }
       })
       .catch((error) => {
