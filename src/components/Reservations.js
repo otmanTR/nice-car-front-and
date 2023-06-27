@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { getReservations } from '../redux/reservations/reservationsSlice';
 import { Navbar } from '../Navbar/Navbar';

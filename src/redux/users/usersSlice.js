@@ -24,7 +24,7 @@ export const loginUser = createAsyncThunk('users/loginUser', async (credentials)
     const userData = response.data;
     return userData;
   } catch (error) {
-    throw new Error(error.response.data.message); // Throw an error with the error message
+    throw new Error(error.response.data.message);
   }
 });
 
@@ -42,17 +42,16 @@ export const usersSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loggedInUser = action.payload;
-        state.error = null; // Reset error state on successful login
+        state.error = null;
+        state.successMessage = 'Login successful!';
       })
       .addCase(loginUser.rejected, (state, action) => {
-        state.error = action.error.message; // Set error state with the error message
-      })
-      .addCase(logoutUser.fulfilled, (state) => {
-        state.loggedInUser = null;
-        state.error = null;
+        state.error = action.error.message;
+        state.successMessage = null;
       })
       .addCase(createUser.fulfilled, (state, action) => {
         state.users.push(action.payload);
+        state.successMessage = 'User created successfully!';
       });
   },
 });
