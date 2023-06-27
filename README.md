@@ -1,70 +1,215 @@
-# Getting Started with Create React App
+# 📗 Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+      - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-## Available Scripts
 
-In the project directory, you can run:
+# 📖 Nice Car Renta Application <a name="about-project"></a>
 
-### `npm start`
+> This is the Front-end of Nice Car Rental Application that allows users to reserve a car, add a new car or delete an existing one.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Built With <a name="built-with"></a>
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [ReactJs](https://react.dev/)
+- [Redux](https://redux.js.org/)
 
-### `npm test`
+### Key Features <a name="key-features"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- See various car models
+- Reserve cars
+- Add cars
+- Delete cars
 
-### `npm run build`
+### Back End App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click [here](https://github.com/otmanTR/nice-car-back-and) to acess the backend app that was built with ruby on rails.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Live Demo 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- To see the live demo, you can visit the links below:
 
-### `npm run eject`
+- [Under Construction]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### API Documentation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Check [swagger documentation](https://car-rental-j96f.onrender.com/api-docs/index.html)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Kanban Board
 
-## Learn More
+- [Link to kanban board](https://github.com/otmanTR/nice-car-back-and/projects/2)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Our team consist of 4 members:
+ [@burakotman](https://github.com/otmanTR)
+ [@jodavid444]((https://github.com/jodavid444))
+ [@alicemirigo]((https://github.com/alicemirigo92))
+ [@becky](https://github.com/Becky449)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Intial state 👇
 
-### Code Splitting
+<img src="/src/images/initial state.jpg" alt="Intial-state-img">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### After 1 week iteration 👇
 
-### Analyzing the Bundle Size
+<img src="/src/images/week 1 iteration.jpg" alt="week-1-iteration-img">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Completed 👇
 
-### Making a Progressive Web App
+<img src="/src/images/week 2 iteration.jpg" alt="week-2-iteration-img">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
+## 💻 Getting Started <a name="getting-started"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To get a local copy up and running, follow these steps.
 
-### Deployment
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+In order to run this project you need to install these prerequisites:
+- If you're running on Windows you can download the prerequisites from the links down below:
 
-### `npm run build` fails to minify
+[Nodejs](https://nodejs.org/en)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Git](https://git-scm.com/)
+
+If you're running on Linux follow these steps down below:
+
+- Install git.
+``` sh
+sudo apt install git
+
+```
+- Install nodejs and npm.
+``` sh
+sudo apt install nodejs
+
+```
+
+### Setup
+
+- First Clone this repository to your desired folder by using the command line:
+
+run this commands:
+
+```sh
+git clone https://github.com/otmanTR/nice-car-front-and.git
+
+```
+
+### Install
+- Install all the dependencies with the following command:
+
+```sh
+npm install
+```
+
+### Usage
+
+- Create an .env file with the following:
+
+``` sh
+REACT_APP_BASE_URL=yourlinktobackendapi
+
+```
+
+- To run the project, execute the following command:
+
+``` sh
+npm start
+
+```
+
+### Run Tests 
+
+To run test execute the following command:
+
+```sh
+  npm run test
+
+```
+
+## Authors <a name="authors"></a>
+
+👤 **Joseph David**
+
+- GitHub: [@jodavid444](https://github.com/jodavid444)
+
+- Twitter: [@jodavid444dave](https://twitter.com/jodavid444dave)
+
+- LinkedIn: [@joseph-david](https://www.linkedin.com/in/joseph-david-/)
+
+👤 **Recep Burak Otman**
+
+- GitHub: [@otmanTR](https://github.com/otmanTR)
+
+- Twitter: [@hotumanzade](https://twitter.com/hotumanzade)
+
+- LinkedIn: [@burakotman](https://www.linkedin.com/in/joseph-david-/)
+
+👤 **Alice Mirigo**
+
+- GitHub: [@alicemirigo92](https://github.com/alicemirigo92)
+
+- Twitter: [@GathoniMirigo](https://twitter.com/GathoniMirigo)
+
+- LinkedIn: [@alicemirig](https://www.linkedin.com/in/alice-mirigo/)
+
+👤 **Rebbeca Nabwire**
+
+- GitHub: [@Becky449](https://github.com/Becky449)
+
+- LinkedIn: [@rebbeca nabwire](https://www.linkedin.com/in/rabeccanabwire/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Add rating system]**
+- [ ] **[Update car details]**
+- [ ] **[Filter user by their role]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please leave a star. Thank you 🙏
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank Microverse for the great project idea.
+- Unsplash for providing content related free pictures.
+- All Thanks to [Murat Korkmaz](https://www.behance.net/muratk) on Behance. For the original Design [guidelines](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
+- Thanks to my teammates, learning and coding partners.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -15,19 +15,18 @@ export const AddCar = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await dispatch(addCar({
-        name,
-        image,
-        model,
-        price,
-        user_id: 1,
-      }));
-      console.log('Added car successfully:', response);
-      console.log(response);
+      await dispatch(
+        addCar({
+          name,
+          image,
+          model,
+          price,
+          user_id: 1,
+        }),
+      );
       setMessage('Added car successfully' || '');
     } catch (error) {
-      console.error('Add car failed:', error);
-      setMessage(error.message || '');
+      setMessage(error.message || 'Add car failed');
     }
   };
 
@@ -39,11 +38,37 @@ export const AddCar = () => {
       <div className="add-car-form">
         <p>{message}</p>
         <div className="add-car-inputs">
-          <input className="name-car-input" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-          <input className="image-input" type="text" placeholder="Image link" value={image} onChange={(e) => setImage(e.target.value)} />
-          <input className="model-input" type="text" placeholder="Car Model" value={model} onChange={(e) => setModel(e.target.value)} />
-          <input className="price-input" type="text" placeholder="Car Price $" value={price} onChange={(e) => setPrice(e.target.value)} />
-          <button className="add-car-button" type="button" onClick={handleSubmit}>Add car</button>
+          <input
+            className="name-car-input"
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            className="image-input"
+            type="text"
+            placeholder="Image link"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
+          <input
+            className="model-input"
+            type="text"
+            placeholder="Car Model"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+          />
+          <input
+            className="price-input"
+            type="text"
+            placeholder="Car Price $"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+          <button className="add-car-button" type="button" onClick={handleSubmit}>
+            Add car
+          </button>
         </div>
       </div>
     </div>

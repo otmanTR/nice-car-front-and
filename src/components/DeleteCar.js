@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars, deleteCar } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
 export const DeleteCar = () => {
   const cars = useSelector((state) => state.cars.cars) || [];
+  const [message, setMessage] = useState('');
 
   const dispatch = useDispatch();
 
@@ -16,12 +17,14 @@ export const DeleteCar = () => {
     dispatch(deleteCar(id))
       .then((action) => {
         const result = action.payload;
-        if (result !== undefined && result !== null && result !== '') {
+        if (result) {
           window.location.reload();
+        } else {
+          console.error('Error deleting car:', action.error.message);
         }
       })
       .catch((error) => {
-        console.error('Error deleting car:', error);
+        setMessage(error.message || 'Error deleting car');
       });
   };
 
@@ -31,15 +34,16 @@ export const DeleteCar = () => {
         <Navbar />
       </div>
       <div className="deleteContainer">
+        <p>{message}</p>
         <h2 className="deleteHead">Delete the Car</h2>
         <div className="carItems">
           {cars.map((car) => (
             <div className="carItemss" key={car.id}>
               <img className="carImage" src={car.image} alt={car.name} />
-              <h2 className="carName">
-                {car.name}
-              </h2>
-              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete Car</button>
+              <h2 className="carName">{car.name}</h2>
+              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>
+                Delete Car
+              </button>
             </div>
           ))}
         </div>
