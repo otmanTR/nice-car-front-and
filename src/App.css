@@ -38,32 +38,30 @@
   }
 }
 
-.mainContainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .arrows-cars {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
+  justify-content: center;
+  margin-top: 22rem;
 }
 
 .home-bg {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-content: space-between;
-  justify-content: center;
-  width: 100%;
+  width: 90%;
+  margin-top: 4rem;
 }
 
 .home-header {
-  color: wheat;
-  background-color: green;
-  margin-bottom: 10px;
-  width: 100%;
+  background-color: rgb(0, 112, 0);
+  margin: 10px;
+  color: #fcecec;
+  width: 80%;
+
+  /* margin: 0 auto; */
+  border-radius: 2px;
+  padding: 10px 0;
+}
+
+.two {
+  margin-top: 10px;
 }
 
 .homeCarsList {
@@ -91,8 +89,9 @@
   margin-top: 15px;
 }
 
-.carItemss {
-  margin: 5px 5px 5px 5px;
+.carousel {
+  padding: 0 30px;
+  color: #fff;
 }
 
 .delete-button {
@@ -103,4 +102,19 @@
   border-radius: 5px;
   padding: 5px 5px;
   margin: 5px 0 5px 0;
+}
+
+.arrow-right,
+.arrow-left {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .arrows-cars {
+    margin-top: 18rem;
+  }
+
+  .next-btn {
+    margin-right: 20px;
+  }
 }

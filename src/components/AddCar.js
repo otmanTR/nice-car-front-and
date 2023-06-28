@@ -31,7 +31,7 @@ export function AddCar() {
   };
 
   return (
-    <div className="mainContainer">
+    <div className="mainContainer add-car-container">
       <div>
         <Navbar />
       </div>

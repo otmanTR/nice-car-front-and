@@ -42,7 +42,7 @@ export function CreateReservation() {
   };
 
   return (
-    <div className="mainContainer reserve-con">
+    <div className="mainContainer rev">
       <div>
         <Navbar />
       </div>
