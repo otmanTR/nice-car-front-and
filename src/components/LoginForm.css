@@ -41,7 +41,8 @@ body {
   border: none;
   background: rgb(6, 164, 6);
   color: white;
-  width: 30%;
+  height: 20%;
+  width: 20%;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;

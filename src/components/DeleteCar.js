@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCars, deleteCar } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
-export const DeleteCar = () => {
+export function DeleteCar() {
   const cars = useSelector((state) => state.cars.cars) || [];
   const [message, setMessage] = useState('');
 
@@ -50,6 +50,6 @@ export const DeleteCar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default DeleteCar;

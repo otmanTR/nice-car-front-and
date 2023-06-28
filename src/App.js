@@ -12,8 +12,8 @@ import { CreateUserForm } from './components/Registration';
 import { LoginForm } from './components/Login';
 import Reservations from './components/Reservations';
 
-const App = () => (
-  <>
+function App() {
+  return (
     <div className="App">
       <Provider store={store}>
         <BrowserRouter>
@@ -31,6 +31,6 @@ const App = () => (
         </BrowserRouter>
       </Provider>
     </div>
-  </>
-);
+  );
+}
 export default App;
