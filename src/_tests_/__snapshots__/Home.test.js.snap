@@ -117,7 +117,7 @@ exports[`Home component should match the snapshot 1`] = `
       Our Cars
     </h2>
     <h3
-      class="home-header"
+      class="home-header two"
     >
       Select your favorite car!
     </h3>
@@ -125,7 +125,7 @@ exports[`Home component should match the snapshot 1`] = `
       class="arrows-cars"
     >
       <button
-        class="arrow-button arrow-left"
+        class="btn"
         type="button"
       >
         Previous
@@ -142,7 +142,7 @@ exports[`Home component should match the snapshot 1`] = `
         </div>
       </div>
       <button
-        class="arrow-button arrow-right"
+        class="btn next-btn"
         type="button"
       >
         Next
