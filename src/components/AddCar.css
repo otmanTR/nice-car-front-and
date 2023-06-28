@@ -36,6 +36,24 @@
   transition: all 0.3s;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 11%;
+}
+
+.car-details-button {
+  background: rgb(6, 165, 6);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 13px 4px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
 @media (max-width: 768px) {
   .add-car-form {
     margin: 10px;

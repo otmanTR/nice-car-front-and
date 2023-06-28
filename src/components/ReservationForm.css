@@ -42,28 +42,32 @@ select,
 
 @media (max-width: 768px) {
   .reserve-container {
-    margin: 0 0 2vw 10px;
+    margin: 0 0 5vw 10px;
     padding: 50px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    height: auto;
   }
 
   .rev {
     margin-bottom: 30px;
+    height: auto;
   }
 
   .reserve-form {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .reserve-input,
   select,
   .reserve-button {
     margin-top: 25px;
+    height: auto;
   }
 
   .reserve-button {
@@ -74,5 +78,6 @@ select,
     border-radius: 10px;
     padding: 15px;
     margin-left: 0;
+    height: auto;
   }
 }
