@@ -4,7 +4,7 @@ import { getReservations } from '../redux/reservations/reservationsSlice';
 import { Navbar } from '../Navbar/Navbar';
 import './styles/Reservations.css';
 
-const Reservations = () => {
+function Reservations() {
   const reservations = useSelector((state) => state.reservations.reservations) || [];
   const dispatch = useDispatch();
 
@@ -33,6 +33,6 @@ const Reservations = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Reservations;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component should match the snapshot 1`] = `
+<div
+  class="login-container"
+>
+  <div
+    class="login-form"
+  >
+    <h2
+      class="login-heading"
+    >
+      Login
+    </h2>
+    <form>
+      <div
+        class="form-group"
+      >
+        <input
+          class="form-control"
+          placeholder="Username"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="btn btn-primary btn-login"
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+    <h2
+      class="or-heading"
+    >
+      Or
+    </h2>
+    <a
+      class="link"
+      href="/registration"
+    >
+      <button
+        class="btn btn-secondary btn-register"
+        type="button"
+      >
+        Register
+      </button>
+    </a>
+  </div>
+</div>
+`;

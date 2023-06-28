@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../redux/users/usersSlice';
 import './CreateUserForm.css';
 
-export const CreateUserForm = () => {
+export function CreateUserForm() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -66,6 +66,6 @@ export const CreateUserForm = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CreateUserForm;

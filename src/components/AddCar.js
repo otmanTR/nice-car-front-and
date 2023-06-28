@@ -4,7 +4,7 @@ import { addCar } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 import './AddCar.css';
 
-export const AddCar = () => {
+export function AddCar() {
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
   const [model, setModel] = useState('');
@@ -73,6 +73,6 @@ export const AddCar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AddCar;
