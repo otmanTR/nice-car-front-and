@@ -43,10 +43,10 @@ export const Home = () => {
       </div>
       <div className="home-bg">
         <h2 className="home-header">Our Cars</h2>
-        <h3 className="home-header">Select your favorite car!</h3>
+        <h3 className="home-header two">Select your favorite car!</h3>
         <div className="arrows-cars">
           <button
-            className="arrow-button arrow-left"
+            className="btn"
             onClick={scrollLeft}
             type="button"
           >
@@ -59,7 +59,7 @@ export const Home = () => {
           </div>
 
           <button
-            className="arrow-button arrow-right"
+            className="btn next-btn"
             onClick={scrollRight}
             type="button"
           >

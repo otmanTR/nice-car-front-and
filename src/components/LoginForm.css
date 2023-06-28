@@ -2,6 +2,7 @@ body {
   background-image: url('/src/images/pexels-mahesh-reddy-14380639.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .login-form {

@@ -15,7 +15,7 @@ a {
 
 .navbar {
   height: 100%;
-  min-height: 100vh;
+  height: 100vh;
   border-right: 1px solid rgba(155, 131, 131, 0.267);
   max-width: 250px;
   display: flex;
@@ -90,18 +90,6 @@ a {
   background: transparent;
   font-size: 2rem;
   display: none;
-}
-
-@media (max-width: 910px) {
-  .navbarlinks {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .navbarlinks {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 768px) {
