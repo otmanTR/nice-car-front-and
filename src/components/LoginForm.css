@@ -1,0 +1,68 @@
+body {
+  background-image: url('/src/images/pexels-mahesh-reddy-14380639.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login-form {
+  width: 400px;
+  height: 300px;
+  margin: 150px auto;
+  background: #fff6;
+  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+}
+
+.login-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.form-group {
+  padding-bottom: 30px;
+}
+
+.form-control {
+  outline: none;
+  border: none;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.btn {
+  border: none;
+  background: rgb(6, 164, 6);
+  color: white;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 0.3s;
+  background: rgb(51, 230, 51);
+}
+
+.or-heading {
+  padding: 7px 0;
+}
+
+@media (min-width: 576px) {
+  .login-form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    width: 500px;
+  }
+}

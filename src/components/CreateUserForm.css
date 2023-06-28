@@ -1,0 +1,37 @@
+
+.create-user-form {
+  width: 400px;
+  height: 300px;
+  margin: 150px auto;
+  background: #fff6;
+  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 24px;
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-control {
+  width: 10%;
+}
+
+@media (min-width: 576px) {
+  .create-user-form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .create-user-form {
+    width: 500px;
+  }
+}

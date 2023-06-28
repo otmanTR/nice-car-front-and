@@ -1,0 +1,67 @@
+
+.add-car-form {
+  padding-left: 90px;
+}
+
+.add-car-inputs {
+  background: #fff6;
+  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  padding: 2.5rem 3rem;
+  margin-top: 50px;
+}
+
+.image-input,
+.model-input,
+.price-input,
+.name-car-input {
+  box-shadow: 9px 10px 39px 0 rgba(0, 0, 0, 0.75);
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin: 25px 0;
+}
+
+.add-car-button {
+  background: rgb(6, 165, 6);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.add-car-button:hover {
+  background: rgb(5, 197, 5);
+  transition: all 0.3s;
+}
+
+.car-details-button {
+  background: rgb(6, 165, 6);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.car-details-button:hover {
+  background: rgb(5, 197, 5);
+  transition: all 0.3s;
+}
+
+.details {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}

@@ -79,7 +79,9 @@ exports[`Home component should match the snapshot 1`] = `
               Reservations
             </a>
           </li>
-          <li>
+          <li
+            class="nan"
+          >
             <a
               class="link"
               href="/add_car"
@@ -106,26 +108,21 @@ exports[`Home component should match the snapshot 1`] = `
       </nav>
     </div>
   </div>
-  <div>
-    <h2>
+  <div
+    class="home-bg"
+  >
+    <h2
+      class="home-header"
+    >
       Our Cars
     </h2>
-    <h3>
+    <h3
+      class="home-header"
+    >
       Select your favorite car!
     </h3>
     <div
-      class="carItems"
-    >
-      <div
-        class="carousel"
-      >
-        <div>
-          No cars available
-        </div>
-      </div>
-    </div>
-    <div
-      class="arrow-buttons-container"
+      class="arrows-cars"
     >
       <button
         class="arrow-button arrow-left"
@@ -133,6 +130,17 @@ exports[`Home component should match the snapshot 1`] = `
       >
         Previous
       </button>
+      <div
+        class="carItems"
+      >
+        <div
+          class="carousel"
+        >
+          <div>
+            No cars available
+          </div>
+        </div>
+      </div>
       <button
         class="arrow-button arrow-right"
         type="button"

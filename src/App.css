@@ -42,3 +42,65 @@
   display: flex;
   flex-direction: row;
 }
+
+.arrows-cars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.home-bg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: space-between;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-header {
+  color: wheat;
+  background-color: green;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.homeCarsList {
+  width: 100%;
+}
+
+.carImage {
+  width: 100%;
+}
+
+.carName {
+  width: 100%;
+  color: white;
+}
+
+.deleteContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 30%;
+}
+
+.deleteHead {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.carItemss {
+  margin: 5px 5px 5px 5px;
+}
+
+.delete-button {
+  border: none;
+  background: rgb(6, 164, 6);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin: 5px 0 5px 0;
+}

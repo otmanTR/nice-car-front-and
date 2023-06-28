@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars, deleteCar } from '../redux/cars/carsSlice';
 import { Navbar } from '../Navbar/Navbar';
 
 export function DeleteCar() {
   const cars = useSelector((state) => state.cars.cars) || [];
+  const [message, setMessage] = useState('');
 
   const dispatch = useDispatch();
 
@@ -16,15 +17,14 @@ export function DeleteCar() {
     dispatch(deleteCar(id))
       .then((action) => {
         const result = action.payload;
-        if (result !== undefined && result !== null && result !== '') {
-          console.log('Car deleted successfully.');
+        if (result) {
           window.location.reload();
         } else {
-          console.error('Error deleting car:', action.error.message);
+          throw new Error('Error deleting car');
         }
       })
       .catch((error) => {
-        console.error('Error deleting car:', error);
+        setMessage(error.message || 'Error deleting car');
       });
   };
 
@@ -33,16 +33,17 @@ export function DeleteCar() {
       <div>
         <Navbar />
       </div>
-      <div>
-        <h2>Delete the Car</h2>
+      <div className="deleteContainer">
+        <p>{message}</p>
+        <h2 className="deleteHead">Delete the Car</h2>
         <div className="carItems">
           {cars.map((car) => (
-            <div key={car.id}>
-              <img src={car.image} alt={car.name} />
-              <h2>
-                {car.name}
-              </h2>
-              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>Delete</button>
+            <div className="carItemss" key={car.id}>
+              <img className="carImage" src={car.image} alt={car.name} />
+              <h2 className="carName">{car.name}</h2>
+              <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>
+                Delete Car
+              </button>
             </div>
           ))}
         </div>

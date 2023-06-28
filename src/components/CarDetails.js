@@ -28,7 +28,7 @@ export function CarDetails() {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div className="details">
         <h2>Car Details</h2>
         <img className="carImage" src={car.image} alt={car.name} />
         <p>

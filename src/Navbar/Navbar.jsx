@@ -53,7 +53,7 @@ export function Navbar() {
 
             </Link>
           </li>
-          <li>
+          <li className="nan">
             <Link to="/add_car" className="link">
               Add A Car
             </Link>
