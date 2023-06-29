@@ -43,7 +43,7 @@ Click [here](https://github.com/otmanTR/nice-car-back-and) to acess the backend 
 
 - To see the live demo, you can visit the links below:
 
-- [Under Construction]
+- [Live](https://singular-speculoos-77f925.netlify.app)
 
 
 ### API Documentation
@@ -123,7 +123,7 @@ npm install
 - Create an .env file with the following:
 
 ``` sh
-REACT_APP_BASE_URL=yourlinktobackendapi
+REACT_APP_BASE_URL=https://nice-car-back-and.onrender.com/
 
 ```
 
