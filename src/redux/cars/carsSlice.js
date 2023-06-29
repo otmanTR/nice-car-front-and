@@ -4,7 +4,7 @@ import axios from 'axios';
 const initialState = {
   cars: [],
 };
-const url = 'http://127.0.0.1:3000/api/v1/cars';
+const url = 'https://nice-car-back-and.onrender.com/api/v1/cars';
 export const getCars = createAsyncThunk('getCars', async () => {
   const response = await axios.get(url);
   const carData = response.data;

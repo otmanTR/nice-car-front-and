@@ -4,7 +4,7 @@ import axios from 'axios';
 const initialState = {
   reservations: [],
 };
-const url = 'http://127.0.0.1:3000/api/v1/reservations';
+const url = 'https://nice-car-back-and.onrender.com/api/v1/reservations';
 export const getReservations = createAsyncThunk('getReservations', async () => {
   const response = await axios.get(url);
   const reservationData = response.data;

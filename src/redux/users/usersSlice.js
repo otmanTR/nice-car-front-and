@@ -5,7 +5,7 @@ const initialState = {
   users: [],
 };
 
-const url = 'http://127.0.0.1:3000/api/v1/users';
+const url = 'https://nice-car-back-and.onrender.com/api/v1/users';
 export const getUser = createAsyncThunk('getUser', async () => {
   const response = await axios.get(url);
   const userData = response.data;
