@@ -30,7 +30,7 @@ export function CarDetails() {
       </div>
       <div className="details">
         <h2>Car Details</h2>
-        <img className="carImage" src={car.image} alt={car.name} />
+        <img className="carImageDetails" src={car.image} alt={car.name} />
         <p>
           Name:
           {car.name}

@@ -39,7 +39,7 @@ export function DeleteCar() {
         <div className="carItems">
           {cars.map((car) => (
             <div className="carItemss" key={car.id}>
-              <img className="carImage" src={car.image} alt={car.name} />
+              <img className="carImageDetails" src={car.image} alt={car.name} />
               <h2 className="carName">{car.name}</h2>
               <button className="delete-button" type="button" onClick={() => handleDelete(car.id)}>
                 Delete Car
